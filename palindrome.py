@@ -3,10 +3,10 @@ import re, os, time, string
 def palindrome():
 	try:
 		os.system('clear')
-		word = str(raw_input("give me a word\n").lower()) # remove case
-		if word in string.letters:
-			word = re.sub(r'\W+', '', word) # remove non-alphanumeric characters
-			reversed = word[::-1] # reverse input
+		word = str(raw_input("give me a word\n")).lower() # remove case
+		word = re.sub(r'\W+', '', word) # remove non-alphanumeric characters
+		reversed = word[::-1] # reverse input
+		if word.isalpha(): # is word all letters (after removing non-alpha)?
 			os.system('clear')
 			if reversed == word:
 				print "This is a palindrome."
